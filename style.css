@@ -1,7 +1,9 @@
+
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 html,body{
     width: 100%;
@@ -21,23 +23,37 @@ html,body{
     width: 100%;
     /* height: 10%; */
     /* background-color: blueviolet; */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 2vw 3vw;
 }
 #nav h1{
     font-size: 1.5vw;
 }
+
+
 #nav a{
     text-decoration: none;
-    font-size: 1.2vw;
+    font-size: 2vw;
     color: #000;
 }
 #nav .navright{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 1.2vw;
 }
 #homemid{
@@ -47,9 +63,16 @@ html,body{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     gap: 0.01vw;
 }
 
@@ -59,9 +82,15 @@ html,body{
 }
 
 .homemidtext{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1vw;
 }
+.homemidtext h1:hover{
+    color: #000;
+}
+
 .homemidtext h1{
     font-size: 5.5vw;
     text-transform: uppercase;
@@ -69,6 +98,7 @@ html,body{
     color: transparent;
     letter-spacing: 0.01vw;
     -webkit-text-stroke: 1px black;
+    cursor: pointer;
 }
 #homelast{
     width: 100%;
@@ -81,6 +111,10 @@ html,body{
     font-size: 1.5vw;
     word-spacing: -0.1vw;
 }
+#homelast p::-moz-selection{
+    background-color: #000;
+    color: #fff;
+}
 #homelast p::selection{
     background-color: #000;
     color: #fff;
@@ -88,19 +122,372 @@ html,body{
 
 #page2{
     width: 100%;
-    padding: 0.1vw;
-    /* background-color: aqua; */
 }
 .featured{
-    padding: 15vw 15vw;
+    padding: 8vw 15vw 2vw 15vw;
 }
 .featured h1{
     text-transform:capitalize;
     font-weight: 500;
     letter-spacing: 0.1vw;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 .featured h1:nth-child(2){
     color: transparent;
     -webkit-text-stroke: 1px #000;
+}
+
+.featuredImages{
+    width: 100%;
+   height: 100vh;
+    /* border: 1px solid black; */
+    padding: 0 15vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-pack: justify;
+
+        -ms-flex-pack: justify;
+
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.fleft{
+    width: 45%;
+   height: 100vh;
+    padding: 0.1vw;
+    /* border: 1px solid orangered; */
+    overflow: hidden;
+
+}
+.fleftel{
+    width: 100%;
+    height: 100%;
+    /* background-color: cadetblue; */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+}
+.fleftel h2{
+    font-size: 1.5vw;
+    font-weight: 200;
+}
+.fleftel h1{
+    font-weight: 400;
+    font-size: 2vw;
+    white-space: nowrap;
+    text-transform:capitalize;
+    margin: 1vw 0;
+}
+.fleftel h3{
+    font-size: 1vw;
+    white-space: nowrap;
+    opacity: 0.5;
+}
+
+
+.fright{
+    width: 45%;
+   height: 100vh;
+    padding: 0.1vw;
+    /* border: 1px solid rgb(0, 8, 255); */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+.frightimg{
+    width: 100%;
+    padding: 2vw;
+   height: 90vh;
+ 
+}
+.frightimg img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 1rem;
+
+}
+.btn{
+    margin-top: 1vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2vw 2vw;
+}
+.btn button{
+    padding: 1vw 2vw;
+    border-radius: 2em;
+    border: 2px solid gray;
+    background-color: #fff;
+    color: #000;
+    font-weight: 500;
+    font-size: 1vw;
+}
+.btn button:hover{
+    background-color: #000;
+    color: #fff;
+}
+#page3{
+    width: 100%;
+}
+.page3text{
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 1.5vw;
+    padding: 5vw 15vw;
+}
+.page3text h1{
+    font-size: 2vw;
+    font-weight: 500;
+}
+.page3text p{
+    font-size: 1.5vw;
+
+}
+.page3card{
+    width: inherit;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1vw;
+    padding: 0 5vw;
+}
+.card{
+    width: inherit;
+    height: inherit;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+
+    gap: 0.5vw;
+    
+}
+.card h3{
+    text-transform:capitalize;
+    margin-left: 0.5vw;
+}
+.cardimg{
+    width: 25rem;
+    height: 10rem;
+
+    border-radius: 1rem;
+    overflow: hidden;
+}
+.cardimg img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+
+@media (min-width:50px) and (max-width:500px) {
+    
+    #nav {
+        padding: 6vw 7vw;
+
+    }
+    #nav h1{
+        font-size: 6vw;
+    }
+    
+    .navright span{
+        font-size: 6vw;
+    }
+    #nav a{
+        font-size: 5vw;
+    }
+    
+    .page3card{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        gap: 10vw;
+    }
+    .featuredImages{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        
+    }
+    .cardimg{
+        width: 92vw;
+        height: 10rem;
+    
+        border-radius: 1rem;
+        overflow: hidden;
+    }
+    .fleft{
+        width: 100%;
+       height: 100vh;
+        padding: 0.1vw;
+        /* border: 1px solid orangered; */
+        overflow: hidden;
+    
+    }
+    .fright{
+        width: 100%;
+       height: 100vh;
+        padding: 0.1vw;
+        /* border: 1px solid rgb(0, 8, 255); */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    #homemid > h1 {
+        font-size: 5.4vw;
+        font-weight: 200;
+    }
+    .homemidtext h1 {
+        font-size: 6vw;
+        text-transform: uppercase;
+        font-weight: 100;
+        color: transparent;
+        letter-spacing: 0.01vw;
+        -webkit-text-stroke: 1px black;
+        cursor: pointer;}
+
+        #homelast{
+            width: 100%;
+            position: absolute;
+            bottom: 2vw;
+            /* background-color: rebeccapurple; */
+            padding: 1vw 15vw;
+        }
+        #homelast p {
+            font-size: 3.7vw;
+            word-spacing: -0.1vw;
+        }
+      
+        .featured h1 {
+            font-size: 6vw;
+        }
+
+        .featured .h2{
+            margin-bottom: 3vw;
+        }
+        .fleftel h2 {
+            font-size: 5.5vw;
+            font-weight: 200;
+
+        }
+         .featured h1{
+            font-size: 4vw;
+        }
+        .fleftel h3 {
+            display: none;
+        }
+        .btn button {
+            padding: 4vw 12vw;
+            border-radius: 5em;
+            border: 3px solid gray;
+            background-color: #fff;
+            color: #000;
+            font-weight: 700;
+            font-size: 3vw;
+        }
+        .fleftel h1 {
+            font-size: 4vw;
+        }
+        .page3text h1 {
+            font-size: 6.5vw;
+            white-space: nowrap;
+            font-weight: 300;
+        }
+        .page3text p {
+          display: none;
+        }
+}
+
+@media (min-width:500px) and (max-width:1000px){
+
+    .page3card{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    .cardimg{
+        width: inherit;
+    }
+}
+
+@media (min-width:1000px) and (max-width:2000px){
+    .cardimg{
+        width: inherit;
+    }
 }
